@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0d0f">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCc+PHJlY3QgeD0nMCcgeT0nMCcgd2lkdGg9JzMwJyBoZWlnaHQ9JzIwJyBmaWxsPScjZmZmJy8+PHJlY3QgeD0nMCcgeT0nMTAnIHdpZHRoPSczMCcgaGVpZ2h0PScxMCcgZmlsbD0nI0Q1MkIxRScvPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCcgZmlsbD0nIzAwMzlBNicvPjxwb2x5Z29uIGZpbGw9JyNmZmYnIHBvaW50cz0nNS4wMCwxLjcwIDUuNzYsMy45NSA4LjE0LDMuOTggNi4yNCw1LjQwIDYuOTQsNy42NyA1LjAwLDYuMzAgMy4wNiw3LjY3IDMuNzYsNS40MCAxLjg2LDMuOTggNC4yNCwzLjk1Jy8+PC9zdmc+">
+    <link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAACK0lEQVR4nO3XO0hbYRjG8eckMURRq9ESo0RwKAgu4jVDKaYqioMOXumiIAjSoWZouygUCiIUaqF1EQRxKIXqoA46iEKMYBBpacmgItZIEJUIBnUwYhxCBU0MZzjf96J5f1tOcg7/85ALARhjjDHGWGJSeoY8n7W+aIvDtllbYQ1ofV0RDKPT206tL1pTnqP1JYXRUQdQ4wHUvrCo4InIDjKqB/jSVwKL2SSyhYSqASxmExylFjRX2UT3SKdqgBaHDXqdgtaX+aJ7pFM1QFt15MZfFD9Fbnay0CDZDHcPvG5+BmdHIRQl8thk1MOaFblpnU6B93sDjoMXN6/3eAPo/bSGk9OQnGKNRQ0wMrUF38E5xvvtMKcbo07ISDUiI9WIcBj4OrmJt99+4SJ0JSVWhJgfgVm3H8Wdc1j5cxTzpJPTENr63XgzvP6gbx6I8x2wd3CO9oGVmM99GPuLyaU9YVEyxf0SrLfnxjxeV2kVEkMh7gCNz/MAAP/2z9D4zoWZZT8AwFFqQVpKkvg6Ce4dIMWkR015Dn4u+lDSNY9Ztx9N713o/LiK0OUV6u2P410Q9SvwX1lhFroHPfixsHvr+MTcDjzewOMfwPX78N6TNnxBbPiCQoJk47/D1AHUeADqAGqKtyg/TB1BKeHfATwAdQA1HoA6gBoPQB1AjQegDqDGA1AHUOMBqAOo8QDUAdR4AOoAajwAdQC1hB/AkNn6apg6gjHGGGOMMfmuAQ+ab7RhcEF4AAAAAElFTkSuQmCC">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+    <meta name="description" content="Chile campeón de la Copa América 2015: partidos, plantel, penales y minijuego.">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500;700&family=Bebas+Neue&display=swap">
+    <title>🏆 La Generación Dorada - Chile Campeón Copa América 2015</title>
+    <style>
+        :root {
+            --rojo:#D52B1E;--rojo-dark:#8B0000;--rojo-bg:#2a0a08;
+            --azul:#0039A6;--azul-dark:#001a4d;
+            --dorado:#FFD700;--dorado2:#DAA520;
+            --blanco:#FFFFFF;--negro:#0d0d0f;
+            --card:#1a1a1e;--border:#2a2a2e;
+            --verde:#24733b;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+        body{font-family:'Roboto',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--negro);color:var(--blanco);overflow-x:hidden}
+
+        /* ====== HERO ====== */
+        .hero{
+            position:relative;min-height:90vh;display:flex;flex-direction:column;
+            justify-content:center;align-items:center;text-align:center;padding:3rem 1.5rem;
+            background:
+                radial-gradient(ellipse at 30% 40%, rgba(213,43,30,0.7) 0%, transparent 55%),
+                radial-gradient(ellipse at 70% 60%, rgba(139,0,0,0.5) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(0,57,166,0.25) 0%, transparent 50%),
+                linear-gradient(180deg, #1a0505 0%, #2a0a08 40%, #0d0d0f 100%);
+            overflow:hidden;
+        }
+        .hero::before{
+            content:'';position:absolute;inset:0;
+            background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,0.015) 2px,rgba(255,255,255,0.015) 4px);
+            pointer-events:none;
+        }
+
+        .hero-badge{
+            display:inline-block;background:rgba(213,43,30,0.3);
+            border:1px solid var(--rojo);color:#ff8a80;padding:.4rem 1.4rem;
+            border-radius:50px;font-family:'Oswald',sans-serif;font-size:.9rem;
+            letter-spacing:2px;text-transform:uppercase;margin-bottom:1.2rem;
+        }
+        .hero h1{
+            font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:clamp(3.2rem,10vw,7rem);
+            line-height:.95;letter-spacing:3px;
+            background:linear-gradient(180deg,#fff 0%,var(--dorado) 60%,var(--dorado2) 100%);
+            -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+        }
+        .hero h2{
+            font-family:'Oswald',sans-serif;font-size:clamp(1.1rem,3vw,2rem);
+            font-weight:400;color:#e5e5e5;margin-top:.6rem;letter-spacing:5px;text-transform:uppercase;
+        }
+
+        /* BANDERA CHILENA CORRECTA */
+        .chile-flag{
+            display:flex;width:240px;height:48px;margin:1.8rem auto;
+            border-radius:6px;overflow:hidden;
+            box-shadow:0 4px 20px rgba(213,43,30,0.4),0 0 40px rgba(213,43,30,0.15);
+            border:2px solid rgba(255,255,255,0.15);
+        }
+        .chile-flag .left-half{
+            width:33.33%;display:flex;flex-direction:column;
+        }
+        .chile-flag .left-half .top-blue{
+            flex:1;background:var(--azul);display:flex;align-items:center;justify-content:center;
+        }
+        .chile-flag .left-half .top-blue::after{
+            content:'★';color:#fff;font-size:1.2rem;
+        }
+        .chile-flag .left-half .bottom-white{
+            flex:1;background:#fff;
+        }
+        .chile-flag .right-half{
+            width:66.67%;display:flex;flex-direction:column;
+        }
+        .chile-flag .right-half .top-white{
+            flex:1;background:#fff;
+        }
+        .chile-flag .right-half .bottom-red{
+            flex:1;background:var(--rojo);
+        }
+
+        .hero-desc{max-width:600px;color:rgba(255,255,255,.75);font-size:1.05rem;margin-top:.5rem;line-height:1.6}
+
+        /* ====== NAV ====== */
+        .navbar{
+            position:sticky;top:0;z-index:100;
+            background:rgba(13,13,15,.95);backdrop-filter:blur(12px);
+            border-bottom:2px solid var(--rojo-dark);padding:.5rem 1rem;
+            display:flex;justify-content:center;gap:.4rem;flex-wrap:wrap;
+        }
+        .nav-btn{
+            background:transparent;border:none;color:#ccc;
+            font-family:'Oswald',sans-serif;font-size:.85rem;letter-spacing:1px;
+            text-transform:uppercase;padding:.5rem .9rem;border-radius:6px;
+            text-decoration:none;cursor:pointer;transition:all .2s;
+        }
+        .nav-btn:hover{color:#fff;background:var(--rojo)}
+
+        /* ====== SECTIONS ====== */
+        .section{max-width:1200px;margin:0 auto;padding:4rem 1.5rem}
+        .sec-head{text-align:center;margin-bottom:2.5rem}
+        .sec-head h2{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--dorado);letter-spacing:2px}
+        .sec-head p{color:rgba(255,255,255,.55);font-size:1rem;margin-top:.3rem}
+
+        /* ====== MATCHES ====== */
+        .fase{
+            background:linear-gradient(90deg,rgba(213,43,30,.2),rgba(0,57,166,.15));
+            border-left:4px solid var(--dorado);padding:.6rem 1.2rem;
+            font-family:'Oswald',sans-serif;font-size:1.15rem;color:var(--dorado);
+            margin:2rem 0 1rem;border-radius:0 8px 8px 0;
+        }
+        .mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.2rem;margin-bottom:1rem}
+        .mc{
+            background:var(--card);border:1px solid var(--border);border-radius:12px;
+            padding:1.2rem;transition:transform .2s,border-color .2s;
+        }
+        .mc:hover{transform:translateY(-3px);border-color:rgba(255,215,0,.35)}
+        .mc.final-card{border-color:var(--dorado);box-shadow:0 0 20px rgba(255,215,0,.12)}
+        .mdate{font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.4);margin-bottom:.7rem}
+        .mrow{display:flex;align-items:center;justify-content:space-between;margin:.6rem 0}
+        .mteam{display:flex;flex-direction:column;align-items:center;gap:.2rem;width:36%;text-align:center}
+        .mteam .fl{font-size:2.1rem}
+        .mteam .nm{font-family:'Oswald',sans-serif;font-size:.95rem}
+        .mscore{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:2.4rem;color:var(--dorado);width:28%;text-align:center}
+        .mscorers{font-size:.82rem;color:rgba(255,255,255,.65);border-top:1px solid rgba(255,255,255,.07);padding-top:.6rem;margin-top:.4rem;text-align:center}
+
+        /* ====== BRACKET ====== */
+        .bracket-box{
+            background:var(--card);border:1px solid var(--border);border-radius:16px;
+            padding:2rem 1.5rem;overflow-x:auto;
+        }
+        .bflex{display:flex;justify-content:space-between;align-items:center;min-width:800px;gap:1.5rem}
+        .bcol{flex:1;display:flex;flex-direction:column;gap:1.5rem}
+        .bcol-t{font-family:'Oswald',sans-serif;color:var(--dorado);text-align:center;text-transform:uppercase;font-size:.9rem;letter-spacing:1.5px;margin-bottom:.5rem}
+        .bm{background:#151517;border:1px solid #333;border-radius:8px;padding:.6rem .8rem;font-size:.85rem}
+        .bm.hl{border-color:var(--dorado);box-shadow:0 0 10px rgba(255,215,0,.15)}
+        .btl{display:flex;justify-content:space-between;padding:.3rem 0}
+        .btl.w{color:var(--dorado);font-weight:bold}
+
+        /* ====== VIDEOS ====== */
+        .vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+        .vc{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .2s}
+        .vc:hover{border-color:var(--rojo)}
+        .vc iframe{width:100%;height:220px;border:none;display:block}
+        .vmeta{padding:1rem}
+        .vmeta h4{font-family:'Oswald',sans-serif;font-size:1.05rem;margin-bottom:.3rem}
+        .vmeta a{color:var(--dorado);text-decoration:none;font-size:.82rem}
+
+        /* ====== FINAL ====== */
+        .final-banner{
+            background:linear-gradient(135deg,rgba(213,43,30,.25),rgba(0,57,166,.2));
+            border:2px solid var(--dorado);border-radius:16px;padding:2.5rem 1.5rem;
+            text-align:center;margin-bottom:3rem;
+        }
+        .fvs{display:flex;justify-content:center;align-items:center;gap:2rem;margin:1.5rem 0;flex-wrap:wrap}
+        .fsd{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:4.5rem;color:var(--dorado);line-height:1}
+        .fps{font-family:'Oswald',sans-serif;font-size:1.5rem;color:#fff;background:var(--rojo);display:inline-block;padding:.3rem 1.5rem;border-radius:30px;margin-top:.5rem}
+
+        /* PITCH */
+        .pitch{
+            max-width:520px;margin:2rem auto;
+            background:radial-gradient(circle,#298244 0%,var(--verde) 80%);
+            border:3px solid rgba(255,255,255,.7);border-radius:16px;padding:2rem 1rem;
+            position:relative;box-shadow:inset 0 0 50px rgba(0,0,0,.5);
+        }
+        .pitch-mid{position:absolute;top:50%;left:0;right:0;height:2px;background:rgba(255,255,255,.35)}
+        .pitch-circ{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;height:70px;border:2px solid rgba(255,255,255,.35);border-radius:50%}
+        .prow{display:flex;justify-content:space-around;position:relative;z-index:2;margin-bottom:2rem}
+        .prow:last-child{margin-bottom:0}
+        .pp{display:flex;flex-direction:column;align-items:center;cursor:pointer;transition:transform .2s}
+        .pp:hover{transform:scale(1.15)}
+        .ppc{width:40px;height:40px;border-radius:50%;background:var(--rojo);color:#fff;font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:1.2rem;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 4px 8px rgba(0,0,0,.4)}
+        .ppc.gk{background:var(--dorado);color:#000}
+        .ppn{font-size:.72rem;font-weight:bold;background:rgba(0,0,0,.7);padding:2px 6px;border-radius:4px;margin-top:4px;text-transform:uppercase}
+
+        /* ====== PLAYERS ====== */
+        .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+        .pcard{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .2s}
+        .pcard:hover{border-color:var(--dorado)}
+        .pcard-top{background:linear-gradient(90deg,var(--rojo-dark),var(--azul-dark));padding:1rem;display:flex;align-items:center;gap:.8rem}
+        .pdorsal{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:2.2rem;color:var(--dorado);line-height:1}
+        .pmi h3{font-family:'Oswald',sans-serif;font-size:1.1rem;line-height:1.2}
+        .pmi span{font-size:.78rem;color:rgba(255,255,255,.65);text-transform:uppercase}
+        .pcard-body{padding:1rem;font-size:.87rem;color:#d4d4d8}
+        .pthumb{width:55px;height:55px;border-radius:50%;object-fit:cover;border:2px solid var(--dorado);margin-left:auto;flex-shrink:0}
+        .wlink{display:inline-block;margin-top:.7rem;color:var(--dorado);text-decoration:none;font-size:.8rem;font-weight:bold}
+
+        /* ====== PENALTIES TABLE ====== */
+        .ptable{max-width:650px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+        .pth{background:linear-gradient(90deg,var(--rojo),var(--azul));padding:.8rem 1rem;display:flex;justify-content:space-between;font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:bold}
+        .prow-t{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.06)}
+        .ps{display:flex;align-items:center;gap:.5rem;width:40%}
+        .ps.ch{justify-content:flex-start}.ps.ar{justify-content:flex-end}
+        .prn{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:1.3rem;color:var(--dorado)}
+        .champion-box{text-align:center;margin-top:2rem;padding:2rem;background:linear-gradient(145deg,rgba(255,215,0,.08),transparent);border-radius:16px}
+
+        /* ====== MINIGAME ====== */
+        .game-sec{
+            background:radial-gradient(circle at center,#1c1c24 0%,#0d0d0f 100%);
+            border-top:1px solid #2a2a2e;padding:4rem 1.5rem;text-align:center;
+        }
+        .game-wrap{max-width:520px;margin:0 auto;position:relative}
+        .game-board{
+            display:flex;justify-content:space-around;align-items:center;
+            background:#141416;border:1px solid #2c2c30;border-radius:12px;
+            padding:1rem;margin-bottom:1rem;
+        }
+        .gts{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:2.8rem;color:var(--dorado);line-height:1}
+        .gtl{font-family:'Oswald',sans-serif;font-size:.9rem;color:#a1a1aa;text-transform:uppercase}
+        .gdots{display:flex;justify-content:center;gap:.4rem;margin:.6rem 0}
+        .gd{width:18px;height:18px;border-radius:50%;border:1px solid #555;display:inline-flex;align-items:center;justify-content:center;font-size:.65rem}
+        .gd.ok{background:#22c55e;border-color:#22c55e;color:#000}
+        .gd.fail{background:var(--rojo);border-color:var(--rojo);color:#fff}
+        #gameCanvas{border:2px solid #333;border-radius:12px;display:block;width:100%;cursor:crosshair;touch-action:none}
+        .gmsg{font-family:'Oswald',sans-serif;font-size:1.1rem;color:var(--dorado);min-height:32px;margin-top:.8rem}
+        .govr{
+            position:absolute;inset:0;background:rgba(13,13,15,.92);border-radius:12px;
+            display:flex;flex-direction:column;justify-content:center;align-items:center;
+            padding:1.5rem;z-index:10;
+        }
+        .govr h3{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:2.5rem;color:var(--dorado)}
+        .govr p{color:#ccc;font-size:.95rem;max-width:340px;margin:.8rem 0;text-align:center;line-height:1.5}
+        .btn-play{
+            background:linear-gradient(135deg,var(--rojo),#ff3b30);color:#fff;
+            font-family:'Oswald',sans-serif;font-size:1.2rem;text-transform:uppercase;
+            letter-spacing:1.5px;border:none;padding:.8rem 2.2rem;border-radius:30px;
+            cursor:pointer;box-shadow:0 4px 15px rgba(213,43,30,.4);margin-top:.5rem;
+            transition:transform .15s;
+        }
+        .btn-play:hover{transform:scale(1.05)}
+
+        .instr-box{
+            background:rgba(255,255,255,.05);border:1px solid rgba(255,215,0,.2);
+            border-radius:12px;padding:1.2rem 1.5rem;max-width:420px;margin:1.5rem auto;text-align:left;
+        }
+        .instr-box h4{font-family:'Oswald',sans-serif;color:var(--dorado);margin-bottom:.5rem}
+        .instr-box li{color:rgba(255,255,255,.75);font-size:.9rem;margin:.3rem 0;list-style:none}
+        .instr-box li::before{content:'⚽ '}
+
+        footer{background:#09090b;border-top:1px solid #1f1f23;text-align:center;padding:2.5rem 1rem;color:#71717a;font-size:.85rem}
+
+        @media(max-width:500px){
+            .vgrid,.mgrid,.pgrid{grid-template-columns:1fr}
+            .chile-flag{width:180px;height:36px}
+        }
+.flag{display:inline-block;width:1.35em;height:.9em;background-size:100% 100%;background-repeat:no-repeat;border-radius:2px;vertical-align:-.1em;box-shadow:0 0 0 1px rgba(255,255,255,.2)}
+.flag.cl{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='30' height='20' fill='%23fff'/%3E%3Crect x='0' y='10' width='30' height='10' fill='%23D52B1E'/%3E%3Crect x='0' y='0' width='10' height='10' fill='%230039A6'/%3E%3Cpolygon fill='%23fff' points='5.00,1.70 5.76,3.95 8.14,3.98 6.24,5.40 6.94,7.67 5.00,6.30 3.06,7.67 3.76,5.40 1.86,3.98 4.24,3.95'/%3E%3C/svg%3E")}
+.flag.ar{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='30' height='20' fill='%2374ACDF'/%3E%3Crect x='0' y='6.67' width='30' height='6.67' fill='%23fff'/%3E%3Ccircle cx='15' cy='10' r='1.9' fill='%23F6B40E'/%3E%3C/svg%3E")}
+.flag.bo{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='30' height='6.67' fill='%23D52B1E'/%3E%3Crect x='0' y='6.67' width='30' height='6.67' fill='%23F9E300'/%3E%3Crect x='0' y='13.33' width='30' height='6.67' fill='%23007A33'/%3E%3C/svg%3E")}
+.flag.ec{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='30' height='10' fill='%23FFDD00'/%3E%3Crect x='0' y='10' width='30' height='5' fill='%23034EA2'/%3E%3Crect x='0' y='15' width='30' height='5' fill='%23ED1C24'/%3E%3C/svg%3E")}
+.flag.co{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='30' height='10' fill='%23FCD116'/%3E%3Crect x='0' y='10' width='30' height='5' fill='%23003893'/%3E%3Crect x='0' y='15' width='30' height='5' fill='%23CE1126'/%3E%3C/svg%3E")}
+.flag.mx{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='10' height='20' fill='%23006847'/%3E%3Crect x='10' y='0' width='10' height='20' fill='%23fff'/%3E%3Crect x='20' y='0' width='10' height='20' fill='%23CE1126'/%3E%3Ccircle cx='15' cy='10' r='2.3' fill='%238C6A3B'/%3E%3C/svg%3E")}
+.flag.pe{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='10' height='20' fill='%23D91023'/%3E%3Crect x='10' y='0' width='10' height='20' fill='%23fff'/%3E%3Crect x='20' y='0' width='10' height='20' fill='%23D91023'/%3E%3C/svg%3E")}
+.flag.py{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='30' height='6.67' fill='%23D52B1E'/%3E%3Crect x='0' y='6.67' width='30' height='6.67' fill='%23fff'/%3E%3Crect x='0' y='13.33' width='30' height='6.67' fill='%230038A8'/%3E%3C/svg%3E")}
+.flag.br{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='30' height='20' fill='%23009C3B'/%3E%3Cpolygon fill='%23FFDF00' points='15,2 27.5,10 15,18 2.5,10'/%3E%3Ccircle cx='15' cy='10' r='4.3' fill='%23002776'/%3E%3C/svg%3E")}
+.flag.uy{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='30' height='20' fill='%23fff'/%3E%3Crect x='0' y='2.2222222222222223' width='30' height='2.2222222222222223' fill='%230038A8'/%3E%3Crect x='0' y='6.666666666666667' width='30' height='2.2222222222222223' fill='%230038A8'/%3E%3Crect x='0' y='11.11111111111111' width='30' height='2.2222222222222223' fill='%230038A8'/%3E%3Crect x='0' y='15.555555555555557' width='30' height='2.2222222222222223' fill='%230038A8'/%3E%3Crect x='0' y='0' width='13.4' height='8.88888888888889' fill='%23fff'/%3E%3Ccircle cx='6.7' cy='4.4' r='2.6' fill='%23FCD116'/%3E%3C/svg%3E")}
+
+        /* ====== MEJORAS ====== */
+        html{scroll-padding-top:64px}
+        .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+        .js .reveal.in{opacity:1;transform:none}
+        @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.js .reveal{opacity:1;transform:none;transition:none}}
+
+        /* nav deslizable en celular + sección activa */
+        .navbar{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+        .navbar::-webkit-scrollbar{display:none}
+        @media(min-width:900px){.navbar{justify-content:center}}
+        .nav-btn{white-space:nowrap;flex:0 0 auto}
+        .nav-btn.active{color:#fff;background:var(--rojo)}
+
+        /* estadísticas del hero */
+        .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;max-width:620px;width:100%;margin:2rem auto 0}
+        .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,215,0,.22);border-radius:12px;padding:.8rem .4rem;backdrop-filter:blur(4px)}
+        .stat b{display:block;font-family:'Bebas Neue',Impact,sans-serif;font-size:2.4rem;color:var(--dorado);line-height:1;font-weight:400}
+        .stat span{font-size:.7rem;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:1px}
+        @media(max-width:500px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+        .note{max-width:760px;margin:1.2rem auto 0;text-align:center;font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.5}
+        .mscore small{display:block;font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:1px;color:#fff;opacity:.7;margin-top:2px}
+        .ps em{font-size:.7rem;color:#8b8b93;font-style:normal}
+
+        /* bracket en vertical en celulares */
+        @media(max-width:700px){.bflex{flex-direction:column;min-width:0;align-items:stretch}.bcol{gap:.8rem}.bracket-box{padding:1.2rem 1rem}}
+
+        /* cancha con áreas y franjas */
+        .pitch{background:repeating-linear-gradient(0deg,rgba(255,255,255,.045) 0 42px,transparent 42px 84px),radial-gradient(circle,#298244 0%,var(--verde) 80%)}
+        .pitch::before,.pitch::after{content:'';position:absolute;left:24%;right:24%;height:13%;border:2px solid rgba(255,255,255,.35)}
+        .pitch::before{top:0;border-top:none}
+        .pitch::after{bottom:0;border-bottom:none}
+        .pitch-hint{text-align:center;font-size:.8rem;color:rgba(255,255,255,.45);margin-top:-.8rem}
+
+        /* videos con miniatura */
+        .vc iframe{aspect-ratio:16/9;height:auto}
+        .vthumb{position:relative;display:block;aspect-ratio:16/9;background:linear-gradient(135deg,var(--rojo-dark),var(--azul-dark));overflow:hidden}
+        .vthumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+        .vthumb:hover img{transform:scale(1.04)}
+        .vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45))}
+        .vplay span{width:68px;height:48px;background:rgba(213,43,30,.94);border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(0,0,0,.5);transition:transform .2s}
+        .vthumb:hover .vplay span{transform:scale(1.1)}
+        .vplay span::after{content:'';border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent #fff;margin-left:4px}
+        .vdesc{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:.5rem}
+        .vwarn{display:none;font-size:.78rem;color:#fbbf24;margin-bottom:.5rem}
+        .vc.unavail .vwarn{display:block}
+        .vc.unavail .vthumb img{display:none}
+        .vlinks{display:flex;gap:1.1rem;flex-wrap:wrap}
+        .vnote{display:none;max-width:760px;margin:1.5rem auto 0;padding:.8rem 1rem;border:1px dashed rgba(255,215,0,.3);border-radius:10px;font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.5;text-align:center}
+
+        /* fichas de jugadores */
+        .pavatar{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--dorado);display:block;background:#2a2a2e}
+        .pavatar.ph{display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-weight:700;color:var(--dorado);font-size:1.3rem}
+        .pavatar-slot{margin-left:auto;flex-shrink:0}
+        .rol{display:inline-block;font-size:.66rem!important;letter-spacing:1px;padding:.12rem .55rem;border-radius:20px;margin-top:.35rem;background:rgba(255,215,0,.16);color:var(--dorado)!important}
+        .rol.sub{background:rgba(34,197,94,.16);color:#4ade80!important}
+        .rol.ban{background:rgba(255,255,255,.1);color:#cbd5e1!important}
+        .pbio{min-height:3.5rem;line-height:1.5}
+        .pmeta{display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap;margin-top:.7rem;font-size:.72rem;color:#8b8b93}
+        .pmeta .wlink{margin-top:0}
+        .src-live{color:#22c55e}.src-cache{color:#f59e0b}.src-off{color:#ef4444}
+        .skel{height:.8rem;border-radius:4px;margin:.5rem 0;background:linear-gradient(90deg,#26262b 25%,#34343b 50%,#26262b 75%);background-size:200% 100%;animation:sh 1.2s infinite}
+        @keyframes sh{to{background-position:-200% 0}}
+        .wbar{display:flex;gap:.8rem;align-items:center;justify-content:center;flex-wrap:wrap;margin:-1rem auto 1.8rem}
+        .wstatus{font-size:.85rem;padding:.45rem 1rem;border-radius:30px;background:rgba(255,255,255,.07);color:#d4d4d8}
+        .wstatus.ok{background:rgba(34,197,94,.14);color:#4ade80}
+        .wstatus.warn{background:rgba(245,158,11,.14);color:#fbbf24}
+        .wstatus.bad{background:rgba(239,68,68,.14);color:#f87171}
+        .btn-refresh{background:transparent;border:1px solid var(--dorado);color:var(--dorado);font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase;font-size:.78rem;padding:.4rem 1rem;border-radius:30px;cursor:pointer}
+        .btn-refresh:disabled{opacity:.45;cursor:default}
+
+        /* bandera de Chile del hero: la mitad inferior es roja de lado a lado */
+        .wdiag{max-width:700px;margin:-.8rem auto 1.6rem;padding:.7rem 1rem;border:1px solid rgba(248,113,113,.35);border-radius:10px;font-size:.82rem;color:#d4d4d8;line-height:1.5}
+        .wdiag summary{cursor:pointer;color:#f87171;font-weight:500}
+        .wdiag ul{margin:.5rem 0 0 1.1rem;color:#9ca3af;font-size:.76rem;word-break:break-word}
+
+        /* minijuego */
+        #gameCanvas{touch-action:manipulation}
+        .gbtns{display:flex;gap:.6rem;justify-content:center;margin-top:.8rem}
+        .gbtns button{flex:1;max-width:150px;background:#1f1f24;color:#fff;border:1px solid #3a3a42;border-radius:10px;padding:.7rem .4rem;font-family:'Oswald',sans-serif;font-size:.95rem;cursor:pointer;transition:all .15s}
+        .gbtns button:hover:not(:disabled){border-color:var(--dorado);color:var(--dorado)}
+        .gbtns button:disabled{opacity:.35;cursor:default}
+
+        /* imágenes locales */
+        img.chile-flag{display:block;width:150px;height:100px;margin:1.6rem auto;border-radius:6px}
+        .fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1rem;max-width:960px;margin:0 auto}
+        .fcard{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem .8rem;text-align:center;transition:transform .2s,border-color .2s}
+        .fcard:hover{transform:translateY(-3px);border-color:var(--dorado)}
+        .fcard.champ{border-color:var(--dorado);box-shadow:0 0 22px rgba(255,215,0,.22)}
+        .fimg{display:block;width:100%;max-width:120px;height:auto;aspect-ratio:3/2;margin:0 auto .7rem;border-radius:6px;box-shadow:0 3px 12px rgba(0,0,0,.45)}
+        .fcard figcaption strong{display:block;font-family:'Oswald',sans-serif;font-size:1.05rem;letter-spacing:.5px}
+        .fcard figcaption span{font-size:.72rem;color:rgba(255,255,255,.55)}
+    </style>
+</head>
+<body>
+
+<!-- ====== HERO ====== -->
+<header class="hero" id="inicio">
+    <div class="hero-badge">⚽ 4 de Julio de 2015 · Estadio Nacional de Santiago</div>
+    <h1>LA GENERACIÓN<br>DORADA</h1>
+    <h2>Chile Campeón Copa América 2015</h2>
+
+    <!-- BANDERA CHILENA REAL -->
+    <img class="chile-flag" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PScyMCcgZmlsbD0nI2ZmZicvPjxyZWN0IHg9JzAnIHk9JzEwJyB3aWR0aD0nMzAnIGhlaWdodD0nMTAnIGZpbGw9JyNENTJCMUUnLz48cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMwMDM5QTYnLz48cG9seWdvbiBmaWxsPScjZmZmJyBwb2ludHM9JzUuMDAsMS43MCA1Ljc2LDMuOTUgOC4xNCwzLjk4IDYuMjQsNS40MCA2Ljk0LDcuNjcgNS4wMCw2LjMwIDMuMDYsNy42NyAzLjc2LDUuNDAgMS44NiwzLjk4IDQuMjQsMy45NScvPjwvc3ZnPg==" alt="Bandera de Chile" width="150" height="100" decoding="async">
+
+    <p class="hero-desc">El día que 17 millones de chilenos gritaron juntos por primera vez:<br><strong style="color:var(--dorado);font-size:1.15rem;">¡CAMPEONES DE AMÉRICA!</strong></p>
+    <div class="stats">
+        <div class="stat"><b data-to="13">13</b><span>Goles a favor</span></div>
+        <div class="stat"><b data-to="4">4</b><span>Goles en contra</span></div>
+        <div class="stat"><b data-to="0">0</b><span>Derrotas</span></div>
+        <div class="stat"><b data-to="99">99</b><span>Años de espera</span></div>
+    </div>
+</header>
+
+<!-- NAV -->
+<nav class="navbar">
+    <a href="#partidos" class="nav-btn">Partidos</a>
+    <a href="#bracket" class="nav-btn">Bracket</a>
+    <a href="#selecciones" class="nav-btn">Selecciones</a>
+    <a href="#videos" class="nav-btn">Videos</a>
+    <a href="#final" class="nav-btn">La Final</a>
+    <a href="#plantel" class="nav-btn">Plantel</a>
+    <a href="#penales" class="nav-btn">Penales</a>
+    <a href="#minijuego" class="nav-btn">🎮 Juego</a>
+</nav>
+
+<!-- ====== PARTIDOS ====== -->
+<section class="section reveal" id="partidos">
+    <div class="sec-head"><h2>Camino al Título</h2><p>Todos los partidos de Chile en la Copa América 2015</p></div>
+
+    <div class="fase">📋 Fase de Grupos – Grupo A</div>
+    <div class="mgrid">
+        <div class="mc">
+            <div class="mdate">11 Jun · Estadio Nacional · Jornada 1</div>
+            <div class="mrow">
+                <div class="mteam"><span class="fl"><i class="flag cl"></i></span><span class="nm">Chile</span></div>
+                <div class="mscore">2 - 0</div>
+                <div class="mteam"><span class="fl"><i class="flag ec"></i></span><span class="nm">Ecuador</span></div>
+            </div>
+            <div class="mscorers">⚽ Vidal 67'(p) · Vargas 84'</div>
+        </div>
+        <div class="mc">
+            <div class="mdate">15 Jun · Estadio Nacional · Jornada 2</div>
+            <div class="mrow">
+                <div class="mteam"><span class="fl"><i class="flag cl"></i></span><span class="nm">Chile</span></div>
+                <div class="mscore">3 - 3</div>
+                <div class="mteam"><span class="fl"><i class="flag mx"></i></span><span class="nm">México</span></div>
+            </div>
+            <div class="mscorers">⚽ Vidal 22', 54'(p) · Vargas 42' | <i class="flag mx"></i> Vuoso 20', 65' · Jiménez 30'</div>
+        </div>
+        <div class="mc">
+            <div class="mdate">19 Jun · Estadio Nacional · Jornada 3</div>
+            <div class="mrow">
+                <div class="mteam"><span class="fl"><i class="flag cl"></i></span><span class="nm">Chile</span></div>
+                <div class="mscore">5 - 0</div>
+                <div class="mteam"><span class="fl"><i class="flag bo"></i></span><span class="nm">Bolivia</span></div>
+            </div>
+            <div class="mscorers">⚽ Aránguiz 3', 66' · Sánchez 37' · Medel 79' · Raldes 86'(a.g.)</div>
+        </div>
+    </div>
+
+    <div class="fase">🏅 Fase Eliminatoria</div>
+    <div class="mgrid">
+        <div class="mc">
+            <div class="mdate">24 Jun · Cuartos de Final</div>
+            <div class="mrow">
+                <div class="mteam"><span class="fl"><i class="flag cl"></i></span><span class="nm">Chile</span></div>
+                <div class="mscore">1 - 0</div>
+                <div class="mteam"><span class="fl"><i class="flag uy"></i></span><span class="nm">Uruguay</span></div>
+            </div>
+            <div class="mscorers">⚽ Mauricio Isla 81'</div>
+        </div>
+        <div class="mc">
+            <div class="mdate">29 Jun · Semifinal</div>
+            <div class="mrow">
+                <div class="mteam"><span class="fl"><i class="flag cl"></i></span><span class="nm">Chile</span></div>
+                <div class="mscore">2 - 1</div>
+                <div class="mteam"><span class="fl"><i class="flag pe"></i></span><span class="nm">Perú</span></div>
+            </div>
+            <div class="mscorers">⚽ Vargas 42', 64' | <i class="flag pe"></i> Medel 60'(a.g.)</div>
+        </div>
+        <div class="mc final-card">
+            <div class="mdate" style="color:var(--dorado)">4 Jul · 🏆 Gran Final</div>
+            <div class="mrow">
+                <div class="mteam"><span class="fl"><i class="flag cl"></i></span><span class="nm">Chile</span></div>
+                <div class="mscore">0 - 0<small>pen. 4-1</small></div>
+                <div class="mteam"><span class="fl"><i class="flag ar"></i></span><span class="nm">Argentina</span></div>
+            </div>
+            <div class="mscorers" style="color:var(--dorado)">🏆 Chile Campeón por penales</div>
+        </div>
+    </div>
+    <p class="note">Minutos de gol según RSSSF y la prensa chilena; según la fuente pueden diferir en ±1′. Marcadores y goleadores contrastados con CONMEBOL, ESPN y Wikipedia.</p>
+</section>
+
+<!-- ====== SELECCIONES (imágenes incrustadas: funcionan sin internet) ====== -->
+<section class="section reveal" id="selecciones">
+    <div class="sec-head"><h2>Las 12 Selecciones</h2><p>Los países que jugaron la Copa América 2015 en Chile</p></div>
+    <div class="fgrid">
+        <figure class="fcard champ"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PScyMCcgZmlsbD0nI2ZmZicvPjxyZWN0IHg9JzAnIHk9JzEwJyB3aWR0aD0nMzAnIGhlaWdodD0nMTAnIGZpbGw9JyNENTJCMUUnLz48cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nMTAnIGZpbGw9JyMwMDM5QTYnLz48cG9seWdvbiBmaWxsPScjZmZmJyBwb2ludHM9JzUuMDAsMS43MCA1Ljc2LDMuOTUgOC4xNCwzLjk4IDYuMjQsNS40MCA2Ljk0LDcuNjcgNS4wMCw2LjMwIDMuMDYsNy42NyAzLjc2LDUuNDAgMS44NiwzLjk4IDQuMjQsMy45NScvPjwvc3ZnPg==" alt="Bandera de Chile" width="120" height="80" decoding="async"><figcaption><strong>Chile</strong><span>🏆 Campeón · Grupo A</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PScyMCcgZmlsbD0nIzc0QUNERicvPjxyZWN0IHg9JzAnIHk9JzYuNjcnIHdpZHRoPSczMCcgaGVpZ2h0PSc2LjY3JyBmaWxsPScjZmZmJy8+PGNpcmNsZSBjeD0nMTUnIGN5PScxMCcgcj0nMS45JyBmaWxsPScjRjZCNDBFJy8+PC9zdmc+" alt="Bandera de Argentina" width="120" height="80" decoding="async"><figcaption><strong>Argentina</strong><span>Subcampeón · Grupo B</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPScxMCcgaGVpZ2h0PScyMCcgZmlsbD0nI0Q5MTAyMycvPjxyZWN0IHg9JzEwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nMjAnIGZpbGw9JyNmZmYnLz48cmVjdCB4PScyMCcgeT0nMCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzIwJyBmaWxsPScjRDkxMDIzJy8+PC9zdmc+" alt="Bandera de Perú" width="120" height="80" decoding="async"><figcaption><strong>Perú</strong><span>3.º lugar · Grupo C</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PSc2LjY3JyBmaWxsPScjRDUyQjFFJy8+PHJlY3QgeD0nMCcgeT0nNi42Nycgd2lkdGg9JzMwJyBoZWlnaHQ9JzYuNjcnIGZpbGw9JyNmZmYnLz48cmVjdCB4PScwJyB5PScxMy4zMycgd2lkdGg9JzMwJyBoZWlnaHQ9JzYuNjcnIGZpbGw9JyMwMDM4QTgnLz48L3N2Zz4=" alt="Bandera de Paraguay" width="120" height="80" decoding="async"><figcaption><strong>Paraguay</strong><span>4.º lugar · Grupo B</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PScyMCcgZmlsbD0nIzAwOUMzQicvPjxwb2x5Z29uIGZpbGw9JyNGRkRGMDAnIHBvaW50cz0nMTUsMiAyNy41LDEwIDE1LDE4IDIuNSwxMCcvPjxjaXJjbGUgY3g9JzE1JyBjeT0nMTAnIHI9JzQuMycgZmlsbD0nIzAwMjc3NicvPjwvc3ZnPg==" alt="Bandera de Brasil" width="120" height="80" decoding="async"><figcaption><strong>Brasil</strong><span>Cuartos de final · Grupo C</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PScxMCcgZmlsbD0nI0ZDRDExNicvPjxyZWN0IHg9JzAnIHk9JzEwJyB3aWR0aD0nMzAnIGhlaWdodD0nNScgZmlsbD0nIzAwMzg5MycvPjxyZWN0IHg9JzAnIHk9JzE1JyB3aWR0aD0nMzAnIGhlaWdodD0nNScgZmlsbD0nI0NFMTEyNicvPjwvc3ZnPg==" alt="Bandera de Colombia" width="120" height="80" decoding="async"><figcaption><strong>Colombia</strong><span>Cuartos de final · Grupo C</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PScyMCcgZmlsbD0nI2ZmZicvPjxyZWN0IHg9JzAnIHk9JzIuMjIyMjIyMjIyMjIyMjIyMycgd2lkdGg9JzMwJyBoZWlnaHQ9JzIuMjIyMjIyMjIyMjIyMjIyMycgZmlsbD0nIzAwMzhBOCcvPjxyZWN0IHg9JzAnIHk9JzYuNjY2NjY2NjY2NjY2NjY3JyB3aWR0aD0nMzAnIGhlaWdodD0nMi4yMjIyMjIyMjIyMjIyMjIzJyBmaWxsPScjMDAzOEE4Jy8+PHJlY3QgeD0nMCcgeT0nMTEuMTExMTExMTExMTExMTEnIHdpZHRoPSczMCcgaGVpZ2h0PScyLjIyMjIyMjIyMjIyMjIyMjMnIGZpbGw9JyMwMDM4QTgnLz48cmVjdCB4PScwJyB5PScxNS41NTU1NTU1NTU1NTU1NTcnIHdpZHRoPSczMCcgaGVpZ2h0PScyLjIyMjIyMjIyMjIyMjIyMjMnIGZpbGw9JyMwMDM4QTgnLz48cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nMTMuNCcgaGVpZ2h0PSc4Ljg4ODg4ODg4ODg4ODg5JyBmaWxsPScjZmZmJy8+PGNpcmNsZSBjeD0nNi43JyBjeT0nNC40JyByPScyLjYnIGZpbGw9JyNGQ0QxMTYnLz48L3N2Zz4=" alt="Bandera de Uruguay" width="120" height="80" decoding="async"><figcaption><strong>Uruguay</strong><span>Cuartos de final · Grupo B</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PSc2LjY3JyBmaWxsPScjRDUyQjFFJy8+PHJlY3QgeD0nMCcgeT0nNi42Nycgd2lkdGg9JzMwJyBoZWlnaHQ9JzYuNjcnIGZpbGw9JyNGOUUzMDAnLz48cmVjdCB4PScwJyB5PScxMy4zMycgd2lkdGg9JzMwJyBoZWlnaHQ9JzYuNjcnIGZpbGw9JyMwMDdBMzMnLz48L3N2Zz4=" alt="Bandera de Bolivia" width="120" height="80" decoding="async"><figcaption><strong>Bolivia</strong><span>Cuartos de final · Grupo A</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPScxMCcgaGVpZ2h0PScyMCcgZmlsbD0nIzAwNjg0NycvPjxyZWN0IHg9JzEwJyB5PScwJyB3aWR0aD0nMTAnIGhlaWdodD0nMjAnIGZpbGw9JyNmZmYnLz48cmVjdCB4PScyMCcgeT0nMCcgd2lkdGg9JzEwJyBoZWlnaHQ9JzIwJyBmaWxsPScjQ0UxMTI2Jy8+PGNpcmNsZSBjeD0nMTUnIGN5PScxMCcgcj0nMi4zJyBmaWxsPScjOEM2QTNCJy8+PC9zdmc+" alt="Bandera de México" width="120" height="80" decoding="async"><figcaption><strong>México</strong><span>Fase de grupos · Grupo A</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PScxMCcgZmlsbD0nI0ZGREQwMCcvPjxyZWN0IHg9JzAnIHk9JzEwJyB3aWR0aD0nMzAnIGhlaWdodD0nNScgZmlsbD0nIzAzNEVBMicvPjxyZWN0IHg9JzAnIHk9JzE1JyB3aWR0aD0nMzAnIGhlaWdodD0nNScgZmlsbD0nI0VEMUMyNCcvPjwvc3ZnPg==" alt="Bandera de Ecuador" width="120" height="80" decoding="async"><figcaption><strong>Ecuador</strong><span>Fase de grupos · Grupo A</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PSc2LjY3JyBmaWxsPScjRkZDQzAwJy8+PHJlY3QgeD0nMCcgeT0nNi42Nycgd2lkdGg9JzMwJyBoZWlnaHQ9JzYuNjcnIGZpbGw9JyMwMDI0N0QnLz48cmVjdCB4PScwJyB5PScxMy4zMycgd2lkdGg9JzMwJyBoZWlnaHQ9JzYuNjcnIGZpbGw9JyNDRjE0MkInLz48cG9seWdvbiBmaWxsPScjZmZmJyBwb2ludHM9JzkuNjQsMTEuNTUgOS44NywxMi4xOCAxMC41NCwxMi4yMSAxMC4wMiwxMi42MiAxMC4yMCwxMy4yNyA5LjY0LDEyLjkwIDkuMDgsMTMuMjcgOS4yNiwxMi42MiA4LjczLDEyLjIxIDkuNDAsMTIuMTgnLz48cG9seWdvbiBmaWxsPScjZmZmJyBwb2ludHM9JzEwLjkyLDEwLjM3IDExLjE1LDEwLjk5IDExLjgyLDExLjAyIDExLjMwLDExLjQ0IDExLjQ3LDEyLjA4IDEwLjkyLDExLjcyIDEwLjM2LDEyLjA4IDEwLjUzLDExLjQ0IDEwLjAxLDExLjAyIDEwLjY4LDEwLjk5Jy8+PHBvbHlnb24gZmlsbD0nI2ZmZicgcG9pbnRzPScxMi40NSw5LjUzIDEyLjY4LDEwLjE2IDEzLjM1LDEwLjE5IDEyLjgzLDEwLjYxIDEzLjAwLDExLjI1IDEyLjQ1LDEwLjg4IDExLjg5LDExLjI1IDEyLjA3LDEwLjYxIDExLjU0LDEwLjE5IDEyLjIxLDEwLjE2Jy8+PHBvbHlnb24gZmlsbD0nI2ZmZicgcG9pbnRzPScxNC4xMyw5LjEwIDE0LjM3LDkuNzMgMTUuMDQsOS43NiAxNC41MiwxMC4xOCAxNC42OSwxMC44MiAxNC4xMywxMC40NSAxMy41OCwxMC44MiAxMy43NSwxMC4xOCAxMy4yMyw5Ljc2IDEzLjkwLDkuNzMnLz48cG9seWdvbiBmaWxsPScjZmZmJyBwb2ludHM9JzE1Ljg3LDkuMTAgMTYuMTAsOS43MyAxNi43Nyw5Ljc2IDE2LjI1LDEwLjE4IDE2LjQyLDEwLjgyIDE1Ljg3LDEwLjQ1IDE1LjMxLDEwLjgyIDE1LjQ4LDEwLjE4IDE0Ljk2LDkuNzYgMTUuNjMsOS43MycvPjxwb2x5Z29uIGZpbGw9JyNmZmYnIHBvaW50cz0nMTcuNTUsOS41MyAxNy43OSwxMC4xNiAxOC40NiwxMC4xOSAxNy45MywxMC42MSAxOC4xMSwxMS4yNSAxNy41NSwxMC44OCAxNy4wMCwxMS4yNSAxNy4xNywxMC42MSAxNi42NSwxMC4xOSAxNy4zMiwxMC4xNicvPjxwb2x5Z29uIGZpbGw9JyNmZmYnIHBvaW50cz0nMTkuMDgsMTAuMzcgMTkuMzIsMTAuOTkgMTkuOTksMTEuMDIgMTkuNDcsMTEuNDQgMTkuNjQsMTIuMDggMTkuMDgsMTEuNzIgMTguNTMsMTIuMDggMTguNzAsMTEuNDQgMTguMTgsMTEuMDIgMTguODUsMTAuOTknLz48cG9seWdvbiBmaWxsPScjZmZmJyBwb2ludHM9JzIwLjM2LDExLjU1IDIwLjYwLDEyLjE4IDIxLjI3LDEyLjIxIDIwLjc0LDEyLjYyIDIwLjkyLDEzLjI3IDIwLjM2LDEyLjkwIDE5LjgwLDEzLjI3IDE5Ljk4LDEyLjYyIDE5LjQ2LDEyLjIxIDIwLjEzLDEyLjE4Jy8+PC9zdmc+" alt="Bandera de Venezuela" width="120" height="80" decoding="async"><figcaption><strong>Venezuela</strong><span>Fase de grupos · Grupo C</span></figcaption></figure>
+        <figure class="fcard"><img class="fimg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAyMCcgd2lkdGg9JzMwMCcgaGVpZ2h0PScyMDAnPjxyZWN0IHg9JzAnIHk9JzAnIHdpZHRoPSczMCcgaGVpZ2h0PScyMCcgZmlsbD0nIzAwOUIzQScvPjxwb2x5Z29uIGZpbGw9JyMwMDAnIHBvaW50cz0nMCwwIDMwLDAgMTUsMTAnLz48cG9seWdvbiBmaWxsPScjMDAwJyBwb2ludHM9JzAsMjAgMzAsMjAgMTUsMTAnLz48cGF0aCBkPSdNMCwwTDMwLDIwTTAsMjBMMzAsMCcgc3Ryb2tlPScjRkVEMTAwJyBzdHJva2Utd2lkdGg9JzMuMicgZmlsbD0nbm9uZScvPjwvc3ZnPg==" alt="Bandera de Jamaica" width="120" height="80" decoding="async"><figcaption><strong>Jamaica</strong><span>Fase de grupos · Grupo B</span></figcaption></figure>
+    </div>
+    <p class="note">Banderas incrustadas en el propio archivo: se ven aunque no tengas internet. Dibujos simplificados (sin escudos).</p>
+</section>
+
+<!-- ====== BRACKET ====== -->
+<section class="section reveal" id="bracket">
+    <div class="sec-head"><h2>Cuadro del Torneo</h2><p>El camino completo de la fase eliminatoria</p></div>
+    <div class="bracket-box">
+        <div class="bflex">
+            <div class="bcol">
+                <div class="bcol-t">Cuartos de Final</div>
+                <div class="bm hl"><div class="btl w"><span><i class="flag cl"></i> Chile</span><span>1</span></div><div class="btl"><span><i class="flag uy"></i> Uruguay</span><span>0</span></div></div>
+                <div class="bm"><div class="btl"><span><i class="flag bo"></i> Bolivia</span><span>1</span></div><div class="btl w"><span><i class="flag pe"></i> Perú</span><span>3</span></div></div>
+                <div class="bm"><div class="btl w"><span><i class="flag ar"></i> Argentina</span><span>0(5)</span></div><div class="btl"><span><i class="flag co"></i> Colombia</span><span>0(4)</span></div></div>
+                <div class="bm"><div class="btl"><span><i class="flag br"></i> Brasil</span><span>1(3)</span></div><div class="btl w"><span><i class="flag py"></i> Paraguay</span><span>1(4)</span></div></div>
+            </div>
+            <div class="bcol">
+                <div class="bcol-t">Semifinales</div>
+                <div class="bm hl"><div class="btl w"><span><i class="flag cl"></i> Chile</span><span>2</span></div><div class="btl"><span><i class="flag pe"></i> Perú</span><span>1</span></div></div>
+                <div class="bm"><div class="btl w"><span><i class="flag ar"></i> Argentina</span><span>6</span></div><div class="btl"><span><i class="flag py"></i> Paraguay</span><span>1</span></div></div>
+            </div>
+            <div class="bcol">
+                <div class="bcol-t">⭐ Gran Final ⭐</div>
+                <div class="bm hl" style="padding:1.2rem 1rem;border-width:2px"><div class="btl w" style="font-size:1.05rem"><span><i class="flag cl"></i> CHILE 🏆</span><span>0(4)</span></div><div class="btl" style="font-size:1.05rem"><span><i class="flag ar"></i> Argentina</span><span>0(1)</span></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== VIDEOS ====== -->
+<section class="section reveal" id="videos">
+    <div class="sec-head"><h2>Momentos Inolvidables</h2><p>Revive los goles, jugadas y los penales históricos</p></div>
+    <div class="vgrid" id="vgrid"></div>
+    <p class="vnote" id="vnote">💡 Estás abriendo el archivo directamente (file://): YouTube suele bloquear los reproductores incrustados en ese modo, por eso cada video se abre en YouTube. Si publicas la página en un hosting (https://), se reproducen aquí mismo.</p>
+</section>
+
+<!-- ====== LA FINAL ====== -->
+<section class="section reveal" id="final">
+    <div class="sec-head"><h2>La Gran Final</h2><p>Formación y táctica de Sampaoli en la noche más grande</p></div>
+    <div class="final-banner">
+        <div class="fvs">
+            <div><div style="font-size:3rem"><i class="flag cl"></i></div><h3 style="font-family:'Oswald';font-size:1.5rem">CHILE</h3></div>
+            <div class="fsd">0 - 0</div>
+            <div><div style="font-size:3rem"><i class="flag ar"></i></div><h3 style="font-family:'Oswald';font-size:1.5rem">ARGENTINA</h3></div>
+        </div>
+        <div class="fps">Penales: Chile 4 – 1 Argentina</div>
+        <p style="color:rgba(255,255,255,.6);margin-top:.8rem;font-size:.9rem">4 de Julio 2015 · Estadio Nacional · 45.693 espectadores · Árbitro: Wilmar Roldán (COL)</p>
+    </div>
+    <h3 style="text-align:center;font-family:'Oswald';color:var(--dorado);margin-bottom:.5rem">Esquema: 3 – 4 – 1 – 2 (Jorge Sampaoli)</h3>
+    <div class="pitch">
+        <div class="pitch-mid"></div><div class="pitch-circ"></div>
+        <div class="prow"><div class="pp" onclick="stp('vargas')"><div class="ppc">11</div><div class="ppn">Vargas</div></div><div class="pp" onclick="stp('sanchez')"><div class="ppc">7</div><div class="ppn">Alexis</div></div></div>
+        <div class="prow"><div class="pp" onclick="stp('valdivia')"><div class="ppc">10</div><div class="ppn">Valdivia</div></div></div>
+        <div class="prow"><div class="pp" onclick="stp('beausejour')"><div class="ppc">15</div><div class="ppn">Beausejour</div></div><div class="pp" onclick="stp('aranguiz')"><div class="ppc">20</div><div class="ppn">Aránguiz</div></div><div class="pp" onclick="stp('vidal')"><div class="ppc">8</div><div class="ppn">Vidal</div></div><div class="pp" onclick="stp('isla')"><div class="ppc">4</div><div class="ppn">Isla</div></div></div>
+        <div class="prow"><div class="pp" onclick="stp('silva')"><div class="ppc">5</div><div class="ppn">Silva</div></div><div class="pp" onclick="stp('diaz')"><div class="ppc">21</div><div class="ppn">Díaz</div></div><div class="pp" onclick="stp('medel')"><div class="ppc">17</div><div class="ppn">Medel</div></div></div>
+        <div class="prow"><div class="pp" onclick="stp('bravo')"><div class="ppc gk">1</div><div class="ppn">Bravo</div></div></div>
+    </div>
+    <p class="pitch-hint">Toca un jugador para ir a su ficha · Cambios: Fernández por Valdivia (75′) y Henríquez por Vargas (94′)</p>
+</section>
+
+<!-- ====== PLANTEL WIKIPEDIA ====== -->
+<section class="section reveal" id="plantel">
+    <div class="sec-head"><h2>Plantel de la Final</h2><p>Fichas leídas en vivo desde la API REST de Wikipedia</p></div>
+    <div class="wbar"><span class="wstatus" id="wikiStatus" role="status" aria-live="polite">⏳ Consultando Wikipedia…</span><button class="btn-refresh" id="wikiRefresh" type="button">↻ Actualizar</button></div>
+    <details class="wdiag" id="wikiDiag" style="display:none"></details>
+    <div class="pgrid" id="playersGrid"></div>
+</section>
+
+<!-- ====== PENALES ====== -->
+<section class="section reveal" id="penales">
+    <div class="sec-head"><h2>La Tanda de Penales</h2><p>Chile 4 – 1 Argentina · Cada tiro desde los 12 pasos</p></div>
+    <div class="ptable">
+        <div class="pth"><span><i class="flag cl"></i> Chile</span><span>Ronda</span><span>Argentina <i class="flag ar"></i></span></div>
+        <div class="prow-t"><div class="ps ch"><span>Matías Fernández</span><span>✅</span></div><div class="prn">1</div><div class="ps ar"><span>✅</span><span>Messi</span></div></div>
+        <div class="prow-t"><div class="ps ch"><span>Vidal</span><span>✅</span></div><div class="prn">2</div><div class="ps ar"><span>❌</span><span>Higuaín <em>(sobre el travesaño)</em></span></div></div>
+        <div class="prow-t"><div class="ps ch"><span>Aránguiz</span><span>✅</span></div><div class="prn">3</div><div class="ps ar"><span>🧤</span><span>Banega <em>(atajó Bravo)</em></span></div></div>
+        <div class="prow-t"><div class="ps ch"><span style="color:var(--dorado);font-weight:bold">Alexis ⚽ (Panenka)</span></div><div class="prn">4</div><div class="ps ar"><span style="color:#666">— No se pateó —</span></div></div>
+    </div>
+    <div class="champion-box">
+        <div style="font-size:4rem">🏆</div>
+        <p style="font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:2rem;color:var(--dorado);letter-spacing:3px">¡CHILE CAMPEÓN DE AMÉRICA!</p>
+        <p style="color:rgba(255,255,255,.65);margin-top:.4rem">Alexis selló la victoria con una elegante "Panenka" que enloqueció al Estadio Nacional <i class="flag cl"></i></p>
+    </div>
+</section>
+
+<!-- ====== MINIJUEGO ====== -->
+<section class="game-sec" id="minijuego">
+    <div class="sec-head"><h2>🎮 Tanda de Penales</h2><p>¡Elige dónde disparar y gana la Copa para Chile!</p></div>
+
+    <div class="instr-box">
+        <h4>📋 Cómo jugar</h4>
+        <ul>
+            <li>Aparecen 3 zonas en el arco: izquierda, centro y derecha</li>
+            <li>Toca la zona del arco (o usa los botones de abajo)</li>
+            <li>El arquero se tira al azar: si adivina el lado, ataja (en el centro igual tienes 40% de gol)</li>
+            <li>Luego Argentina patea automáticamente</li>
+            <li>5 rondas. Si empatan, muerte súbita ⚡</li>
+        </ul>
+    </div>
+
+    <div class="game-wrap">
+        <div class="game-board">
+            <div><div class="gtl"><i class="flag cl"></i> Chile</div><div class="gts" id="gCS">0</div><div class="gdots" id="gCD"></div></div>
+            <div style="font-family:'Bebas Neue';font-size:1.8rem;color:#555">VS</div>
+            <div><div class="gtl">Argentina <i class="flag ar"></i></div><div class="gts" id="gAS">0</div><div class="gdots" id="gAD"></div></div>
+        </div>
+
+        <div style="position:relative">
+            <canvas id="gameCanvas" width="480" height="360"></canvas>
+            <div class="govr" id="govr">
+                <h3 id="ovrTitle">🏆 ¡A ganar la Copa!</h3>
+                <p id="ovrDesc">Anota más penales que Argentina en 5 rondas y levanta la Copa América.</p>
+                <button class="btn-play" id="ovrBtn" onclick="initGame()">Comenzar ⚽</button>
+            </div>
+        </div>
+        <div class="gbtns"><button type="button" data-z="0">⬅ Izquierda</button><button type="button" data-z="1">⬆ Centro</button><button type="button" data-z="2">Derecha ➡</button></div>
+        <div class="gmsg" id="gMsg">Presiona comenzar para jugar</div>
+    </div>
+</section>
+
+<footer>
+    <p><i class="flag cl"></i> Homenaje a la Selección Chilena · Copa América 2015 · La Generación Dorada</p>
+    <p style="margin-top:.4rem;font-size:.75rem;color:#52525b">Fichas: Wikipedia (CC BY-SA 4.0) · Fotos: Wikimedia Commons, cada una con su licencia · Datos del torneo: RSSSF, CONMEBOL y ESPN</p>
+</footer>
+
+<script>
+/* ============================================================
+   UTILIDADES
+   ============================================================ */
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const norm=s=>String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const reduceMotion=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ============================================================
+   VIDEOS (miniatura + clic). Todos los IDs están aquí, en un solo lugar.
+   - Con http(s): el clic reproduce el video dentro de la página.
+   - Abriendo el archivo directo (file://): YouTube suele bloquear los
+     reproductores incrustados, así que el clic abre YouTube en otra pestaña.
+   - Si la miniatura no carga, la tarjeta avisa y ofrece una búsqueda.
+   ============================================================ */
+const VIDEOS=[
+    {id:"5suUr02N87w",t:"🏆 Chile campeón: resumen de la final",d:"CONMEBOL · 0-0 y 4-1 en penales",q:"Chile Argentina final Copa América 2015 resumen CONMEBOL"},
+    {id:"8yiI0uW6e4o",t:"🥅 La tanda de penales completa",d:"CONMEBOL · Chile (4) 0-0 (1) Argentina",q:"Chile Argentina tanda de penales Copa América 2015"},
+    {id:"uP8PNY-yOls",t:"⚽ Todos los goles de Eduardo Vargas",d:"CONMEBOL · incluye sus 4 goles de 2015",q:"goles Eduardo Vargas Copa América CONMEBOL"}
+];
+const IS_WEB=/^https?:$/.test(location.protocol);
+
+function buildVideos(){
+    const g=$("#vgrid");if(!g)return;
+    g.innerHTML=VIDEOS.map(v=>{
+        const watch=`https://www.youtube.com/watch?v=${v.id}`;
+        const search=`https://www.youtube.com/results?search_query=${encodeURIComponent(v.q)}`;
+        return `<article class="vc" id="vc-${v.id}">
+            <a class="vthumb" href="${watch}" target="_blank" rel="noopener" data-id="${v.id}" data-title="${esc(v.t)}" aria-label="Reproducir: ${esc(v.t)}">
+                <img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="" loading="lazy" referrerpolicy="no-referrer">
+                <span class="vplay"><span></span></span>
+            </a>
+            <div class="vmeta">
+                <h4>${esc(v.t)}</h4>
+                <p class="vdesc">${esc(v.d)}</p>
+                <p class="vwarn">⚠️ No se pudo cargar la miniatura: el video puede haber sido retirado. Prueba con «Buscar similares».</p>
+                <div class="vlinks"><a href="${watch}" target="_blank" rel="noopener">Ver en YouTube ↗</a><a href="${search}" target="_blank" rel="noopener">Buscar similares 🔎</a></div>
+            </div>
+        </article>`;
+    }).join("");
+    g.querySelectorAll(".vthumb").forEach(a=>{
+        const img=a.querySelector("img");
+        const bad=()=>a.closest(".vc").classList.add("unavail");
+        img.addEventListener("error",bad);
+        img.addEventListener("load",()=>{if(img.naturalWidth&&img.naturalWidth<=120)bad()});
+        a.addEventListener("click",e=>{
+            if(!IS_WEB)return;               // file:// → deja que el enlace abra YouTube
+            e.preventDefault();
+            const f=document.createElement("iframe");
+            f.src=`https://www.youtube-nocookie.com/embed/${a.dataset.id}?autoplay=1&rel=0&modestbranding=1`;
+            f.title=a.dataset.title;
+            f.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";
+            f.allowFullscreen=true;
+            f.referrerPolicy="strict-origin-when-cross-origin";
+            a.replaceWith(f);
+        });
+    });
+    const note=$("#vnote");
+    if(note)note.style.display=IS_WEB?"none":"block";
+}
+
+/* ============================================================
+   PLANTEL · API REST DE WIKIPEDIA (con búsqueda, caché y respaldo)
+   ============================================================ */
+const squad=[
+    {id:"bravo",n:1,name:"Claudio Bravo",pos:"Arquero · Capitán",rol:"Titular",rt:"tit",wiki:"Claudio_Bravo",def:"Capitán y figura de la final: le atajó el penal a Banega en la tanda."},
+    {id:"silva",n:5,name:"Francisco Silva",pos:"Defensa central",rol:"Titular",rt:"tit",wiki:"Francisco_Silva_(futbolista_chileno)",def:"Titular en la final como central en la línea de tres de Sampaoli."},
+    {id:"medel",n:17,name:"Gary Medel",pos:"Defensa central",rol:"Titular",rt:"tit",wiki:"Gary_Medel",def:"El 'Pitbull'. Pilar de la zaga: jugó los 570 minutos del torneo."},
+    {id:"vidal",n:8,name:"Arturo Vidal",pos:"Mediocampista",rol:"Titular",rt:"tit",wiki:"Arturo_Vidal",def:"El 'Rey Arturo'. Anotó 3 goles (dos de penal) y fue la figura de la final."},
+    {id:"isla",n:4,name:"Mauricio Isla",pos:"Lateral derecho",rol:"Titular",rt:"tit",wiki:"Mauricio_Isla",def:"Autor del gol del 1-0 sobre Uruguay en cuartos de final."},
+    {id:"diaz",n:21,name:"Marcelo Díaz",pos:"Mediocampista / central",rol:"Titular",rt:"tit",wiki:"Marcelo_Díaz_(futbolista)",def:"Cerebro táctico del equipo de Sampaoli; clave en la salida de balón."},
+    {id:"aranguiz",n:20,name:"Charles Aránguiz",pos:"Mediocampista",rol:"Titular",rt:"tit",wiki:"Charles_Aránguiz",def:"El 'Príncipe'. Doblete a Bolivia y gol de penal en la final."},
+    {id:"beausejour",n:15,name:"Jean Beausejour",pos:"Carrilero izquierdo",rol:"Titular",rt:"tit",wiki:"Jean_Beausejour",def:"Recorrido y proyección incansable por la banda izquierda."},
+    {id:"valdivia",n:10,name:"Jorge Valdivia",pos:"Mediapunta",rol:"Titular · salió al 74′",rt:"tit",wiki:"Jorge_Valdivia",def:"El 'Mago'. Máximo asistidor del torneo: 3 pases gol, igualado con Messi."},
+    {id:"vargas",n:11,name:"Eduardo Vargas",pos:"Delantero",rol:"Titular · salió al 94′",rt:"tit",wiki:"Eduardo_Vargas",def:"Goleador del torneo con 4 goles (junto a Paolo Guerrero): uno a Ecuador, uno a México y dos a Perú."},
+    {id:"sanchez",n:7,name:"Alexis Sánchez",pos:"Delantero",rol:"Titular",rt:"tit",wiki:"Alexis_Sánchez",def:"El 'Niño Maravilla'. Su penal a lo Panenka selló la primera Copa América de Chile."},
+    {id:"matias",n:14,name:"Matías Fernández",pos:"Mediocampista",rol:"Ingresó al 75′",rt:"sub",wiki:"Matías_Fernández",def:"Entró por Valdivia y pateó el primer penal de la tanda, el 'penal perfecto'."},
+    {id:"henriquez",n:22,name:"Ángelo Henríquez",pos:"Delantero",rol:"Ingresó al 94′",rt:"sub",wiki:"Ángelo_Henríquez",def:"Joven delantero de 21 años que entró por Vargas en el alargue."},
+    {id:"pinilla",n:9,name:"Mauricio Pinilla",pos:"Delantero",rol:"Banca en la final",rt:"ban",wiki:"Mauricio_Pinilla",def:"Delantero de área del plantel campeón; tuvo poco minutaje en el torneo."}
+];
+
+const ES="https://es.wikipedia.org",EN="https://en.wikipedia.org";
+const CACHE_KEY="gd2015:wiki:v1:";
+
+const net={ok:0,err:""};
+async function jget(url,ms=15000){
+    const c=new AbortController(),t=setTimeout(()=>c.abort(),ms);
+    try{
+        const r=await fetch(url,{signal:c.signal});
+        if(!r.ok){net.err="HTTP "+r.status;return null}
+        const j=await r.json();net.ok++;return j;
+    }catch(e){net.err=(e&&e.name==="AbortError")?"tiempo agotado":String((e&&e.message)||e);return null}
+    finally{clearTimeout(t)}
+}
+/* Plan C: JSONP (etiqueta script); sirve cuando el navegador bloquea fetch por CORS */
+let jsonpN=0;
+function jsonp(url,ms=15000){
+    return new Promise(res=>{
+        if(window.__noJsonp){net.err=net.err||"JSONP desactivado";return res(null)}
+        const cb="__wp"+(++jsonpN)+"_"+Date.now(),sc=document.createElement("script");
+        const done=v=>{clearTimeout(t);delete window[cb];sc.remove();res(v)};
+        const t=setTimeout(()=>{net.err="JSONP: tiempo agotado";done(null)},ms);
+        window[cb]=d=>{net.ok++;done(d)};
+        sc.onerror=()=>{net.err="JSONP: script bloqueado";done(null)};
+        sc.src=url+"&callback="+cb;document.head.appendChild(sc);
+    });
+}
+const T=t=>encodeURIComponent(t.replace(/ /g,"_"));
+const actionUrl=(host,params,cors)=>`${host}/w/api.php?format=json&${params}${cors?"&origin=*":""}`;
+const pageParams=title=>`action=query&redirects=1&prop=extracts|pageimages|info&exintro=1&explaintext=1&piprop=thumbnail&pithumbsize=240&inprop=url&titles=${encodeURIComponent(title.replace(/_/g," "))}`;
+/* Convierte la respuesta de la API "action" al mismo formato que el resumen REST */
+function fromAction(j){
+    const pages=j&&j.query&&j.query.pages;if(!pages)return null;
+    const pg=Object.values(pages)[0];
+    if(!pg||pg.missing!==undefined||!pg.extract)return null;
+    return{type:"standard",title:pg.title,description:"",extract:pg.extract,thumbnail:pg.thumbnail,timestamp:pg.touched,content_urls:{desktop:{page:pg.fullurl}}};
+}
+let MODE=null;   // "rest" | "action" | "jsonp": el primero que funcione en este dispositivo
+async function getPage(host,title){
+    if(MODE==="rest")return jget(`${host}/api/rest_v1/page/summary/${T(title)}`);
+    if(MODE==="action")return fromAction(await jget(actionUrl(host,pageParams(title),true)));
+    if(MODE==="jsonp")return fromAction(await jsonp(actionUrl(host,pageParams(title),false)));
+    return null;
+}
+async function wsearch(host,q){
+    const p=`action=query&list=search&srlimit=3&srsearch=${encodeURIComponent(q)}`;
+    const j=MODE==="jsonp"?await jsonp(actionUrl(host,p,false)):await jget(actionUrl(host,p,true));
+    return ((j&&j.query&&j.query.search)||[]).map(x=>x.title);
+}
+/* Prueba los 3 métodos con una página cualquiera y se queda con el que responda */
+async function probe(){
+    net.ok=0;net.err="";MODE=null;
+    const tests=[
+        ["rest",()=>jget(`${ES}/api/rest_v1/page/summary/Chile`,12000)],
+        ["action",async()=>fromAction(await jget(actionUrl(ES,pageParams("Chile"),true),12000))],
+        ["jsonp",async()=>fromAction(await jsonp(actionUrl(ES,pageParams("Chile"),false),12000))]
+    ];
+    const log=[];
+    for(const[name,fn] of tests){
+        net.err="";const r=await fn();
+        log.push(`${name}: ${r&&r.extract?"OK":"falló ("+(net.err||"sin datos")+")"}`);
+        if(r&&r.extract){MODE=name;break}
+    }
+    return log;
+}
+/* ¿La página es de un futbolista chileno (y no de un homónimo)? */
+function esPersona(d,p,exacto){
+    if(!d||d.type==="disambiguation"||!d.extract)return false;
+    const txt=(d.description||"")+" "+d.extract;
+    if(!/f[uú]tbol|football|soccer/i.test(txt))return false;
+    return exacto||(/chile/i.test(txt)&&norm(d.title||"").includes(norm(p.name.split(" ").pop())));
+}
+async function fetchWiki(p){
+    let d=await getPage(ES,p.wiki);                                   // 1) título conocido (es)
+    if(esPersona(d,p,true))return{d,lang:"es"};
+    for(const t of await wsearch(ES,`${p.name} futbolista chileno`)){ // 2) búsqueda (es)
+        d=await getPage(ES,t);if(esPersona(d,p))return{d,lang:"es"};
+    }
+    for(const t of await wsearch(EN,`${p.name} Chilean footballer`)){ // 3) búsqueda (en)
+        d=await getPage(EN,t);if(esPersona(d,p))return{d,lang:"en"};
+    }
+    return null;
+}
+const toObj=({d,lang})=>({
+    extract:d.extract,thumb:d.thumbnail&&d.thumbnail.source||"",title:d.title||"",lang,ts:d.timestamp||"",
+    url:(d.content_urls&&d.content_urls.desktop&&d.content_urls.desktop.page)||`https://${lang}.wikipedia.org/wiki/${encodeURIComponent((d.title||"").replace(/ /g,"_"))}`
+});
+const cacheGet=id=>{try{return JSON.parse(localStorage.getItem(CACHE_KEY+id))}catch(e){return null}};
+const cacheSet=(id,o)=>{try{localStorage.setItem(CACHE_KEY+id,JSON.stringify(o))}catch(e){}};
+const fmtDate=iso=>{try{const x=new Date(iso);return isNaN(x)?"":x.toLocaleDateString("es-CL",{day:"numeric",month:"short",year:"numeric"})}catch(e){return ""}};
+const initials=n=>n.split(" ").map(w=>w[0]).slice(0,2).join("");
+function recortar(t,max=280){
+    if(t.length<=max)return t;
+    const cut=t.slice(0,max),i=cut.lastIndexOf(". ");
+    return i>120?cut.slice(0,i+1):cut.replace(/\s+\S*$/,"")+"…";
+}
+window.phAvatar=(img,txt)=>{const d=document.createElement("div");d.className="pavatar ph";d.textContent=txt;img.replaceWith(d)};
+
+function buildCards(){
+    const g=$("#playersGrid");g.innerHTML="";
+    squad.forEach(p=>{
+        const c=document.createElement("div");c.className="pcard";c.id=`card-${p.id}`;
+        c.innerHTML=`<div class="pcard-top">
+                <div class="pdorsal">#${p.n}</div>
+                <div class="pmi"><h3>${esc(p.name)}</h3><span><i class='flag cl'></i> ${esc(p.pos)}</span><br><span class="rol ${p.rt}">${esc(p.rol)}</span></div>
+                <div class="pavatar-slot" id="av-${p.id}"><div class="pavatar ph">${esc(initials(p.name))}</div></div>
+            </div>
+            <div class="pcard-body"><div class="pbio" id="bio-${p.id}"></div><div class="pmeta" id="meta-${p.id}"></div></div>`;
+        g.appendChild(c);
+    });
+}
+function setSkeleton(p){
+    $(`#bio-${p.id}`).innerHTML='<div class="skel"></div><div class="skel"></div><div class="skel" style="width:60%"></div>';
+    $(`#meta-${p.id}`).innerHTML="";
+}
+function fillCard(p,o,mode){
+    const bio=$(`#bio-${p.id}`),meta=$(`#meta-${p.id}`),av=$(`#av-${p.id}`);
+    if(!bio)return;
+    const wl=(o&&o.url)||`${ES}/wiki/${encodeURIComponent(p.wiki)}`;
+    bio.textContent=o?recortar(o.extract):p.def;
+    if(o&&o.thumb){
+        av.innerHTML=`<img class="pavatar" src="${esc(o.thumb)}" alt="${esc(p.name)}" loading="lazy" referrerpolicy="no-referrer" onerror="phAvatar(this,'${esc(initials(p.name))}')">`;
+    }
+    let src;
+    if(mode==="live")src=`<span class="src-live">● En vivo · Wikipedia (${o.lang})${o.ts?` · editado ${esc(fmtDate(o.ts))}`:""}</span>`;
+    else if(mode==="cache")src=`<span class="src-cache">● Copia guardada${o.savedAt?` el ${esc(fmtDate(new Date(o.savedAt).toISOString()))}`:""}</span>`;
+    else src=`<span class="src-off">● Texto de respaldo (sin conexión)</span>`;
+    meta.innerHTML=`${src}<a class="wlink" href="${esc(wl)}" target="_blank" rel="noopener">📖 Wikipedia →</a>`;
+    const card=$(`#card-${p.id}`);if(card)card.dataset.source=mode;
+}
+
+let loadingSquad=false;
+async function diagnose(log){
+    const out=[];
+    out.push(`Dirección de la página: ${location.protocol}//${location.host||"(archivo local)"}`);
+    out.push(`Internet según el dispositivo: ${navigator.onLine===false?"SIN conexión":"conectado"}`);
+    let reach="no";
+    try{await fetch(ES+"/",{mode:"no-cors"});reach="sí"}catch(e){out.push("Alcanzar es.wikipedia.org: "+((e&&e.message)||e))}
+    out.push(`¿Se alcanza es.wikipedia.org?: ${reach}`);
+    out.push(...log.map(l=>"Método "+l));
+    let verdict;
+    if(navigator.onLine===false)verdict="Tu dispositivo dice que no tiene internet. Conéctate y pulsa «Actualizar».";
+    else if(reach==="no")verdict="No se puede llegar a Wikipedia desde esta página. Suele ser la red (datos/Wi-Fi, ahorro de datos, DNS o bloqueo) o el visor donde abriste el archivo, que bloquea conexiones externas. Prueba abrir el archivo directo en Chrome o Firefox.";
+    else verdict="Wikipedia responde, pero el navegador o visor no deja leer la respuesta (restricción CORS/seguridad). Prueba abrir el archivo directo en Chrome o Firefox, o subirlo a un hosting https.";
+    $("#wikiDiag").innerHTML=`<summary>🔎 ¿Por qué no conecta? (toca para ver)</summary><p><strong>${esc(verdict)}</strong></p><ul>${out.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
+    $("#wikiDiag").style.display="block";
+}
+async function loadSquad(){
+    if(loadingSquad)return;loadingSquad=true;
+    const st=$("#wikiStatus"),btn=$("#wikiRefresh"),dg=$("#wikiDiag");
+    btn.disabled=true;st.className="wstatus";st.textContent="⏳ Probando conexión con Wikipedia…";dg.style.display="none";
+    const log=await probe();
+    let live=0,cached=0,off=0,done=0,seen=0;
+    await Promise.all(squad.map(async p=>{
+        setSkeleton(p);
+        let r=null;
+        if(MODE){try{r=await fetchWiki(p)}catch(e){}}
+        if(r){const o=toObj(r);cacheSet(p.id,{...o,savedAt:Date.now()});fillCard(p,o,"live");live++}
+        else{const c=cacheGet(p.id);if(c){fillCard(p,c,"cache");cached++}else{fillCard(p,null,"off");off++}}
+        st.textContent=`⏳ Consultando Wikipedia… ${++done}/${squad.length}`;
+    }));
+    const hora=new Date().toLocaleTimeString("es-CL",{hour:"2-digit",minute:"2-digit"});
+    const N=squad.length;
+    if(live===N){st.className="wstatus ok";st.textContent=`✅ ${live}/${N} fichas cargadas en vivo desde Wikipedia · ${hora}`}
+    else if(live>0){st.className="wstatus warn";st.textContent=`⚠️ ${live}/${N} en vivo · ${cached} desde copia guardada · ${off} con texto de respaldo`}
+    else if(MODE){st.className="wstatus warn";st.textContent="⚠️ Wikipedia respondió, pero no se reconocieron las fichas: mostrando textos de respaldo."}
+    else if(cached>0){st.className="wstatus warn";st.textContent=`⚠️ Sin conexión a Wikipedia: mostrando ${cached} fichas guardadas en este dispositivo`}
+    else{st.className="wstatus bad";st.textContent="⚠️ No se pudo conectar con Wikipedia: mostrando textos de respaldo."}
+    if(!MODE)await diagnose(log);
+    window.__wikiReport={live,cached,off,total:N,mode:MODE};
+    btn.disabled=false;loadingSquad=false;
+}
+
+function stp(id){
+    const c=document.getElementById(`card-${id}`);
+    if(!c)return;
+    c.scrollIntoView({behavior:reduceMotion?"auto":"smooth",block:"center"});
+    c.style.borderColor="var(--dorado)";c.style.boxShadow="0 0 25px rgba(255,215,0,.4)";
+    setTimeout(()=>{c.style.borderColor="";c.style.boxShadow=""},2500);
+}
+
+/* ============================================================
+   INTERFAZ: menú activo, aparición al hacer scroll, contadores
+   ============================================================ */
+function setupUI(){
+    const links=[...document.querySelectorAll(".nav-btn")],nav=$(".navbar");
+    const reveals=[...document.querySelectorAll(".reveal")];
+    if(!("IntersectionObserver" in window)){reveals.forEach(el=>el.classList.add("in"));return}
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.05});
+    reveals.forEach(el=>io.observe(el));
+    const so=new IntersectionObserver(es=>es.forEach(e=>{
+        if(!e.isIntersecting)return;
+        links.forEach(l=>{
+            const on=l.getAttribute("href")==="#"+e.target.id;
+            l.classList.toggle("active",on);
+            if(on&&nav&&nav.scrollWidth>nav.clientWidth)nav.scrollTo({left:l.offsetLeft-(nav.clientWidth-l.clientWidth)/2,behavior:reduceMotion?"auto":"smooth"});
+        });
+    }),{rootMargin:"-45% 0px -50% 0px"});
+    document.querySelectorAll("section[id]").forEach(s=>so.observe(s));
+    // contadores del hero
+    document.querySelectorAll(".stat b[data-to]").forEach(b=>{
+        const to=+b.dataset.to;
+        if(reduceMotion||to===0){b.textContent=to;return}
+        const t0=performance.now(),dur=1100;
+        (function tick(t){const k=Math.min(1,(t-t0)/dur);b.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(tick)})(t0);
+    });
+}
+
+/* ============================================================
+   MINIJUEGO DE PENALES
+   ============================================================ */
+const cv=$("#gameCanvas"),cx=cv.getContext("2d");
+const W=480,H=360;
+(function hiDPI(){
+    const dpr=Math.min(window.devicePixelRatio||1,3);
+    cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);
+})();
+const FONT="Oswald, 'Arial Narrow', sans-serif",FONT2="'Bebas Neue', Impact, sans-serif";
+
+const G={x:65,y:40,w:350,h:170};
+const zoneW=G.w/3;
+const SIDES=["left","center","right"];
+const zones=[
+    {name:"izquierda",x:G.x,y:G.y,w:zoneW,h:G.h,ballTarget:{x:G.x+zoneW*0.4,y:G.y+G.h*0.45}},
+    {name:"centro",x:G.x+zoneW,y:G.y,w:zoneW,h:G.h,ballTarget:{x:G.x+G.w/2,y:G.y+G.h*0.35}},
+    {name:"derecha",x:G.x+zoneW*2,y:G.y,w:zoneW,h:G.h,ballTarget:{x:G.x+G.w-zoneW*0.4,y:G.y+G.h*0.45}}
+];
+
+/* estados: idle · user_turn · resolving · arg_turn · finished */
+let state="idle",cScore=0,aScore=0,cHist=[],aHist=[],busy=false,hoverZone=-1;
+
+function setButtons(on){document.querySelectorAll(".gbtns button").forEach(b=>b.disabled=!on)}
+
+function drawScene(opts={}){
+    cx.clearRect(0,0,W,H);
+    let sg=cx.createLinearGradient(0,0,0,H*.42);sg.addColorStop(0,"#0b1021");sg.addColorStop(1,"#1e293b");
+    cx.fillStyle=sg;cx.fillRect(0,0,W,H*.42);
+    cx.fillStyle="rgba(255,255,255,.4)";
+    [[30,15],[90,25],[150,8],[250,20],[350,12],[420,28],[460,7]].forEach(s=>{cx.fillRect(s[0],s[1],2,2)});
+    let gg=cx.createLinearGradient(0,H*.42,0,H);gg.addColorStop(0,"#1e6e30");gg.addColorStop(1,"#144222");
+    cx.fillStyle=gg;cx.fillRect(0,H*.42,W,H*.58);
+    cx.fillStyle="rgba(255,255,255,.02)";
+    for(let i=0;i<6;i+=2)cx.fillRect(0,H*.42+i*(H*.58/6),W,H*.58/6);
+
+    cx.fillStyle="rgba(255,255,255,.08)";cx.fillRect(G.x-5,G.y-8,G.w+10,G.h+8);
+    cx.strokeStyle="rgba(255,255,255,.15)";cx.lineWidth=.8;
+    for(let x=G.x;x<=G.x+G.w;x+=18){cx.beginPath();cx.moveTo(x,G.y);cx.lineTo(x,G.y+G.h);cx.stroke()}
+    for(let y=G.y;y<=G.y+G.h;y+=18){cx.beginPath();cx.moveTo(G.x,y);cx.lineTo(G.x+G.w,y);cx.stroke()}
+    cx.strokeStyle="#fff";cx.lineWidth=6;cx.strokeRect(G.x,G.y,G.w,G.h);
+
+    if(state==="user_turn"&&!busy){
+        const labels=["⬅ IZQ","⬆ CENTRO","DER ➡"];
+        zones.forEach((z,i)=>{
+            const hv=hoverZone===i;
+            cx.fillStyle=hv?"rgba(255,215,0,.35)":"rgba(255,255,255,.08)";
+            cx.fillRect(z.x+3,z.y+3,z.w-6,z.h-6);
+            cx.strokeStyle=hv?"rgba(255,215,0,.7)":"rgba(255,255,255,.15)";
+            cx.lineWidth=hv?2:1;
+            cx.setLineDash([6,4]);cx.strokeRect(z.x+3,z.y+3,z.w-6,z.h-6);cx.setLineDash([]);
+            cx.fillStyle=hv?"rgba(255,215,0,.95)":"rgba(255,255,255,.45)";
+            cx.font=`bold ${hv?15:13}px ${FONT}`;cx.textAlign="center";
+            cx.fillText(labels[i],z.x+z.w/2,z.y+z.h/2+5);
+        });
+        cx.fillStyle="rgba(255,215,0,.85)";cx.font=`bold 14px ${FONT}`;cx.textAlign="center";
+        cx.fillText("ELIGE DÓNDE DISPARAR",W/2,G.y-10);
+    }
+
+    const gkState=opts.gkDive||"center";
+    let gkX=W/2;
+    if(gkState==="left")gkX=G.x+zoneW*0.5;
+    else if(gkState==="right")gkX=G.x+G.w-zoneW*0.5;
+    drawGK(gkX,G.y+G.h-38,gkState);
+
+    if(opts.ball)drawBall(opts.ball.x,opts.ball.y,opts.ball.s||10);
+    else drawBall(W/2,300,10);
+
+    if(opts.resultText){
+        cx.font=`bold 36px ${FONT2}`;cx.textAlign="center";
+        if(opts.resultText==="¡GOL!"){cx.fillStyle="rgba(34,197,94,.9)";cx.fillText("⚽ ¡GOL!",W/2,G.y+G.h+50)}
+        else{cx.fillStyle="rgba(239,68,68,.9)";cx.fillText("❌ ¡ATAJADA!",W/2,G.y+G.h+50)}
+    }
+}
+function drawGK(x,y,dive){
+    cx.save();cx.translate(x,y);
+    if(dive==="left")cx.rotate(-.35);else if(dive==="right")cx.rotate(.35);
+    cx.fillStyle="#fbcfe8";cx.beginPath();cx.arc(0,-25,8,0,Math.PI*2);cx.fill();
+    cx.fillStyle="#0284c7";cx.fillRect(-9,-17,18,26);
+    cx.strokeStyle="#0284c7";cx.lineWidth=4;
+    cx.beginPath();cx.moveTo(-9,-10);cx.lineTo(-22,-26);cx.moveTo(9,-10);cx.lineTo(22,-26);cx.stroke();
+    cx.fillStyle="#ef4444";cx.beginPath();cx.arc(-22,-26,5,0,Math.PI*2);cx.fill();cx.beginPath();cx.arc(22,-26,5,0,Math.PI*2);cx.fill();
+    cx.restore();
+}
+function drawBall(x,y,s){
+    cx.fillStyle="rgba(0,0,0,.25)";cx.beginPath();cx.ellipse(x+2,y+s+3,s,s*.35,0,0,Math.PI*2);cx.fill();
+    cx.fillStyle="#fff";cx.beginPath();cx.arc(x,y,s,0,Math.PI*2);cx.fill();
+    cx.fillStyle="#1e293b";cx.beginPath();cx.arc(x,y,s*.38,0,Math.PI*2);cx.fill();
+}
+function updUI(){
+    $("#gCS").textContent=cScore;$("#gAS").textContent=aScore;
+    $("#gCD").innerHTML=cHist.map(h=>`<span class="gd ${h?'ok':'fail'}">${h?'✓':'✗'}</span>`).join('');
+    $("#gAD").innerHTML=aHist.map(h=>`<span class="gd ${h?'ok':'fail'}">${h?'✓':'✗'}</span>`).join('');
+}
+function msg(t){$("#gMsg").innerHTML=t}
+
+function initGame(){
+    cScore=0;aScore=0;cHist=[];aHist=[];busy=false;hoverZone=-1;state="user_turn";
+    $("#govr").style.display="none";
+    updUI();drawScene();setButtons(true);
+    msg("<i class='flag cl'></i> Ronda 1 — ¡Elige dónde disparar!");
+}
+
+function animateShot(targetX,targetY,gkDive,isGoal,cb){
+    busy=true;setButtons(false);
+    let f=0;const total=18,sx=W/2,sy=300;
+    (function go(){
+        f++;const p=1-Math.pow(1-f/total,3);
+        drawScene({ball:{x:sx+(targetX-sx)*p,y:sy+(targetY-sy)*p,s:10-3*p},gkDive:f>total*0.5?gkDive:"center"});
+        if(f<total)requestAnimationFrame(go);
+        else{
+            drawScene({ball:{x:targetX,y:targetY,s:7},gkDive,resultText:isGoal?"¡GOL!":"¡ATAJADA!"});
+            setTimeout(()=>{busy=false;cb()},1200);
+        }
+    })();
+}
+
+function userShoot(zoneIdx){
+    if(state!=="user_turn"||busy)return;
+    state="resolving";hoverZone=-1;                 // ← evita disparos dobles mientras se resuelve la jugada
+    const zone=zones[zoneIdx],gkDive=SIDES[Math.floor(Math.random()*3)],shootSide=SIDES[zoneIdx];
+    let isGoal;
+    if(shootSide===gkDive)isGoal=shootSide==="center"?Math.random()>.6:false;
+    else isGoal=true;
+    msg(`<i class='flag cl'></i> Chile dispara a la <strong>${zone.name}</strong>...`);
+    animateShot(zone.ballTarget.x,zone.ballTarget.y,gkDive,isGoal,()=>{
+        if(isGoal){cScore++;cHist.push(true);msg("⚽ <strong>¡¡GOOOOOL DE CHILE!!</strong>")}
+        else{cHist.push(false);msg("🧤 <strong>¡Atajada del arquero!</strong>")}
+        updUI();
+        setTimeout(argTurn,1400);
+    });
+}
+
+function argTurn(){
+    state="arg_turn";msg("<i class='flag ar'></i> Turno de Argentina...");drawScene();
+    setTimeout(()=>{
+        const shootIdx=Math.floor(Math.random()*3),target=zones[shootIdx].ballTarget;
+        const isGoal=Math.random()<.42;
+        const gkDive=isGoal?SIDES[(shootIdx+1)%3]:SIDES[shootIdx];
+        animateShot(target.x,target.y,gkDive,isGoal,()=>{
+            if(isGoal){aScore++;aHist.push(true);msg("😰 <strong>Gol de Argentina...</strong>")}
+            else{aHist.push(false);msg("🧤 <strong>¡¡BRAVO LA ATAJÓ!!</strong> ¡Grande capitán!")}
+            updUI();
+            setTimeout(()=>{
+                if(cHist.length>=5){
+                    if(cScore>aScore)endGame(true);
+                    else if(aScore>cScore)endGame(false);
+                    else{state="user_turn";drawScene();setButtons(true);msg("⚡ <strong>¡EMPATE! Muerte súbita</strong> — ¡Dispara!")}
+                }else{
+                    const rem=5-cHist.length;
+                    if(cScore>aScore+rem){endGame(true);return}
+                    if(aScore>cScore+rem){endGame(false);return}
+                    state="user_turn";drawScene();setButtons(true);msg(`<i class='flag cl'></i> Ronda ${cHist.length+1} — ¡Elige dónde disparar!`);
+                }
+            },1300);
+        });
+    },1200);
+}
+
+function endGame(win){
+    state="finished";setButtons(false);
+    $("#govr").style.display="flex";
+    $("#ovrBtn").textContent="Jugar de nuevo ⚽";
+    const t=$("#ovrTitle"),d=$("#ovrDesc");
+    if(win){
+        t.textContent="🏆 ¡¡CHILE CAMPEÓN!!";t.style.color="var(--dorado)";
+        d.innerHTML=`<strong>Chile ${cScore} – ${aScore} Argentina</strong><br>¡La Generación Dorada levanta la Copa América! <i class='flag cl'></i>⭐🎉`;
+    }else{
+        t.textContent="😢 Derrota...";t.style.color="var(--rojo)";
+        d.innerHTML=`<strong>Chile ${cScore} – ${aScore} Argentina</strong><br>¡Inténtalo de nuevo! La Roja nunca se rinde.`;
+    }
+}
+
+function coords(e){
+    const r=cv.getBoundingClientRect();
+    return{x:(e.clientX-r.left)*(W/r.width),y:(e.clientY-r.top)*(H/r.height)};
+}
+function zoneAt(x,y){
+    for(let i=0;i<zones.length;i++){const z=zones[i];if(x>=z.x&&x<=z.x+z.w&&y>=z.y&&y<=z.y+z.h)return i}
+    return -1;
+}
+cv.addEventListener("pointermove",e=>{
+    if(e.pointerType!=="mouse"||state!=="user_turn"||busy)return;
+    const{x,y}=coords(e),hz=zoneAt(x,y);
+    if(hz!==hoverZone){hoverZone=hz;drawScene()}
+    cv.style.cursor=hz>=0?"pointer":"default";
+});
+cv.addEventListener("pointerleave",()=>{
+    if(hoverZone!==-1){hoverZone=-1;if(state==="user_turn"&&!busy)drawScene()}
+});
+cv.addEventListener("click",e=>{                   // un solo manejador: sirve para mouse y toque (y deja hacer scroll con el dedo)
+    if(state!=="user_turn"||busy)return;
+    const{x,y}=coords(e),z=zoneAt(x,y);
+    if(z>=0)userShoot(z);
+});
+document.querySelectorAll(".gbtns button").forEach(b=>b.addEventListener("click",()=>userShoot(+b.dataset.z)));
+
+/* ============================================================
+   INICIO
+   ============================================================ */
+window.addEventListener("DOMContentLoaded",()=>{
+    setupUI();buildVideos();buildCards();loadSquad();drawScene();setButtons(false);
+    $("#wikiRefresh").addEventListener("click",loadSquad);
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{if(state!=="resolving"&&!busy)drawScene()});
+});
+
+</script>
+</body>
+</html>
